@@ -13,15 +13,15 @@ var app = angular.module('bankApp', ['ngRoute',
       templateUrl : "views/accounts.html",
       controller : "accountsCtrl"
     })
-    .when('/add-account.html', {
+    .when('/add-account', {
       templateUrl : "views/add-account.html",
       controller : "addAccountCtrl"
     })
-    .when('/edit-account.html', {
+    .when('/edit-account', {
       templateUrl : "views/edit-account.html",
       controller : "editAccountCtrl"
     })
-    .when('/delete-account.html', {
+    .when('/delete-account', {
       templateUrl : "views/delete-account.html",
       controller : "deleteAccountCtrl"
     })
