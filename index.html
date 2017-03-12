@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='bankApp'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Angular Bank App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js" charset="utf-8"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+  <script src="js/controllers/accountsController.js" charset="utf-8"></script>
+  <script src="js/controllers/addAccountController.js" charset="utf-8"></script>
+  <script src="js/controllers/editAccountController.js" charset="utf-8"></script>
+  <script src="js/controllers/deleteAccountController.js" charset="utf-8"></script>
+  <script src="js/controllers/timeController.js" charset="utf-8"></script>
+  <script src="js/controllers/activeLinkController.js" charset="utf-8"></script>
+  <script src="js/services/dbService.js" charset="utf-8"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <a href="" class="navbar-brand">Bank App</a>
+      <ul class="nav navbar-nav navbar-left" ng-controller="activeLinkCtrl" ng-init="active = 1">
+        <li ng-click="changeActive(1)" ng-class="{'active' : active === 1}"><a href="#/">Accounts</a></li>
+        <li ng-click="changeActive(2)" ng-class="{'active' : active === 2}"><a href="#/add-account.html">Add account</a></li>
+        <li ng-click="changeActive(3)" ng-class="{'active' : active === 3}"><a href="#/edit-account.html">Edit account</a></li>
+        <li ng-click="changeActive(4)" ng-class="{'active' : active === 4}"><a href="#/delete-account.html">Delete account</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="" ng-controller="timeCtrl">{{clock | date:'medium'}}</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <ng-view></ng-view>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
