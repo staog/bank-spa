@@ -24,9 +24,9 @@
       <a href="" class="navbar-brand">Bank App</a>
       <ul class="nav navbar-nav navbar-left" ng-controller="activeLinkCtrl" ng-init="active = 1">
         <li ng-click="changeActive(1)" ng-class="{'active' : active === 1}"><a href="#/">Accounts</a></li>
-        <li ng-click="changeActive(2)" ng-class="{'active' : active === 2}"><a href="#/add-account.html">Add account</a></li>
-        <li ng-click="changeActive(3)" ng-class="{'active' : active === 3}"><a href="#/edit-account.html">Edit account</a></li>
-        <li ng-click="changeActive(4)" ng-class="{'active' : active === 4}"><a href="#/delete-account.html">Delete account</a></li>
+        <li ng-click="changeActive(2)" ng-class="{'active' : active === 2}"><a href="#/add-account">Add account</a></li>
+        <li ng-click="changeActive(3)" ng-class="{'active' : active === 3}"><a href="#/edit-account">Edit account</a></li>
+        <li ng-click="changeActive(4)" ng-class="{'active' : active === 4}"><a href="#/delete-account">Delete account</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="" ng-controller="timeCtrl">{{clock | date:'medium'}}</a></li>
