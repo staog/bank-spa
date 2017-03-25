@@ -17,7 +17,6 @@ angular.module('editAccountController', []).controller('editAccountCtrl', functi
     db[ind].name = $scope.name;
     db[ind].deposit = $scope.deposit;
     db[ind].card = $scope.card;
-    $location.path('/');
   };
 
   $scope.cancelEditing = function () {
