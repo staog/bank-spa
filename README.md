@@ -10,4 +10,8 @@ You can add new users, delete users or edit informations about users.
 
 ==================================================
 
+---
 
+## TO DO list:
+
+1. Fix navbar (not updating after edit or delete have been done)
